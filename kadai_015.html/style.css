@@ -1,0 +1,49 @@
+
+/* フォントの種類を指定する */
+/* テキストを全て中央寄せにする */
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+  text-align: center;
+}
+
+/* ルート要素のフォントサイズを２０pxにする */
+html {
+  font-size: 20px;
+}
+
+/* フォントカラーを指定する */
+/* h1の文字色をMをスカイブルーに、ピンクを rgb(255, 192, 203)　に変更する*/
+.blue {
+  color: skyblue;
+}
+.pink {
+  color: rgb(255, 192, 203);
+}
+
+/* h1の装飾 */
+/* h1のフォントには、Googleフォント「Josefin Sans」 を使用する */  
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/* h１のフォントサイズは、ルート要素の２倍になるようにする */
+/* h1の総称フォントは、「sans-serif」 を使用する */
+/* h1の文字間を、文字の大きさに対して１．２倍になるようにする */
+/* h１に影を付ける。影の大きさや色は自由に*/
+/* h1の下に3px（カラー：rgb(115, 115, 114)）の実線を付ける */
+h1 {
+  font-size: 2rem;
+  font-family: sans-serif;
+  letter-spacing: 1.2em;
+  text-shadow: 1px 1px 2px pink;
+  border-bottom: solid 3px rgb(115, 115, 114);
+}
+
+
+/* divタグで囲った部分のみ太字にする */
+#basic p {
+  font-weight: bold;
+}

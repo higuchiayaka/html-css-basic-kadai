@@ -1,0 +1,111 @@
+/* h1、p、body要素の上下左右余白（margin）を0にしてください。 */
+body,h1,p {
+  margin: 0;
+}
+
+/* 記事内全てのp要素とa要素のフォントサイズを20pxとします。 */
+p ,a {
+  font-size: 20px;
+}
+
+
+/* header要素内のスタイルの変更 */
+
+header {
+  margin-bottom: 20px;                    /*下の余白を２０pxにする*/
+  background-color:  rgb(244, 79, 79);  /*背景色を「 rgb(244, 79, 79)」にする*/
+  text-align: center;                      /*中のテキスト（要素）を中央揃えにする*/
+}
+
+header h1 {
+  color: rgb(255, 255, 255);            /*文字色をrgb(255, 255, 255)にする*/
+}
+
+
+
+/* main部分のスタイルの変更 */
+
+main {
+  margin: 10px;   /*main要素内の余白を上下左右とも10pxにします。*/
+}
+
+/* id名parentの要素のスタイルを変更 */
+#parent {
+  display: flex;                    /*id名parentの要素をFlexコンテナにする*/
+  justify-content: space-between;   /*一番左と一番右のアイテムも含め、均等な間隔で配置する*/
+}
+
+/* class名contentsの要素のスタイルの変更 */
+.contents {
+  display: flex;
+  flex-direction: column;   /*子要素を縦方向に並べる*/
+  border: 3px solid rgb(238, 204, 204); /* 線（太さ3px、実線、色rgb(238, 204, 204)で囲う*/
+  flex-basis: 25%;          /*親要素の２５％の幅にする*/
+  padding: 10px 15px;       /*内側の余白を上下１０px　左右１５px*/
+  margin: 20px 0px;         /*外側の余白を上下２０px 左右０*/
+  justify-content: center;  /*アイテムを 水平方向に中央揃え*/
+  align-items: center;      /*アイテムを垂直方向に中央揃え*/
+}
+
+/* h２要素についてスタイルを変更 */
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+  position: relative; /*擬似要素(::before)を絶対配置するための準備*/
+  padding-left: 1em;
+}
+
+.contents h2::before {
+  content: "⚫︎";
+  color: rgb(239, 111, 139);
+  position: absolute;
+  left: 0;
+}
+
+/* 2番目のp要素の１文字目だけに色をつける */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+.contents img {
+  margin: 10px;
+  width: 70%;
+}
+
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+@media screen and (max-width: 1024px) {
+  div{
+    display: inline-block;
+  }
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 25%;
+}
+
+#parent {
+  flex-direction: column;
+  align-items: center;
+}
+
+.contents {
+  flex-basis: 90%;
+}
